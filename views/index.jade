@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	h1= title
+	p Incoming Chat:&nbsp;
+	ul#incomingChatMessage
+	br
+	input(
+		type='text'
+		name='outgoingChatMessage'
+		id='outgoingChatMessage'
+	)
+	input(
+		type='submit'
+		name='submit_btn'
+		id='submit_btn'
+		value='发言'
+	)
+	form(id="set-nickname")
+		label(for="nickname") Nickname:
+		input(
+			type='text'
+			name='nickname'
+			id='nickname'
+		)
+		input(
+			type='submit'
+			value='设置名称'
+		)
+	section(id="nicknames")
+	form(id="send-message")
+		textarea(id="message")
+		input(
+			type='submit'
+			value='Send message!'
+		)
+	section(id="messages")
