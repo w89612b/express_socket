@@ -3,6 +3,7 @@
 
 
 结合 express 框架时  socket.io服务编写在根目录下/bin/.www 文件中 具体修改
+```
 
 /**********************************修改开始*******************************/
 /**
@@ -18,6 +19,7 @@
 
 //server.listen(port);
 /**********************************替换内容*******************************/
+
 var server = app.listen(app.get('port'),function(){
 	console.log('Express server listening on port ' + server.address().port);
 });
@@ -27,8 +29,10 @@ var io = require('socket.io').listen(server);
 io.sockets.on('connection', function (socket) {
    //io事件处理
 });
+
 /**********************************修改结束*******************************/
 
+```
 
 遇到问题  .jade模板框架
 
